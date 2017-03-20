@@ -1,0 +1,9 @@
+platform: rflink
+  new_devices_group: rfsensor
+  devices:
+    upm_esic_0001_temp:
+      name: parveke_lt
+      sensor_type: temperature
+    upm_esic_0001_hum:
+      name: parveke_kosteus
+      sensor_type: humidity

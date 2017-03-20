@@ -1,0 +1,35 @@
+evening_light:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.etela
+      data:
+        # 900 seconds = 15 minutes
+        transition: 900
+        brightness: 144
+        color_temp: 447
+    - service: light.turn_on
+      entity_id: light.pohjoinen
+      data:
+        transition: 900
+        brightness: 144
+        color_temp: 447
+    - service: light.turn_on
+      entity_id: light.tv
+      data:
+        transition: 450
+        brightness: 144
+    - service: light.turn_on
+      entity_id: light.tripodi
+      data:
+        transition: 450
+        brightness: 124
+    - service: light.turn_on
+      entity_id: light.sphere
+    - service: light.turn_on
+      entity_id: light.rt
+    - service: light.turn_off
+      entity_id: light.k_indirect
+    - service: light.turn_off
+      entity_id: light.spotit
+    - service: light.turn_off
+      entity_id: light.halli

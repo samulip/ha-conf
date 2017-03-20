@@ -1,0 +1,15 @@
+*.pid
+*.xml
+*.csr
+*.crt
+*.key
+*.conf
+home-assistant.log
+home-assistant_v2.db
+lib
+deps
+tts
+secrets.yaml
+secrets
+known_devices.yaml
+phue.conf

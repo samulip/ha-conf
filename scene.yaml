@@ -1,0 +1,85 @@
+- name: energize
+  entities:
+    light.pohjoinen:
+      state: on
+      brightness: 254
+      color_temp: 156
+    light.tv:
+      state: on
+      brightness: 254
+    light.tripodi:
+      state: on
+      brightness: 254
+    light.etela:
+      state: on
+      brightness: 254
+      color_temp: 156
+    light.spotit:
+      state: on
+      brightness: 255
+    light.sphere:
+      state: off
+- name: focus
+  entities:
+    light.pohjoinen:
+      state: on
+      brightness: 254
+      color_temp: 233
+    light.tv:
+      state: on
+      brightness: 254
+    light.tripodi:
+      state: on
+      brightness: 254
+    light.etela:
+      state: on
+      brightness: 254
+      color_temp: 233
+    light.rt:
+      state: on
+      brightness: 255
+    light.spotit:
+      state: on
+      brightness: 255
+- name: read
+  entities:
+    light.pohjoinen:
+      state: on
+      brightness: 254
+      color_temp: 346
+    light.tv:
+      state: on
+      brightness: 219
+    light.tripodi:
+      state: on
+      brightness: 219
+    light.etela:
+      state: on
+      brightness: 254
+      color_temp: 346
+    light.sphere:
+      state: on
+      brightness: 255
+    light.rt:
+      state: on
+      brightness: 255
+- name: relax
+  entities:
+    light.pohjoinen:
+      state: on
+      brightness: 144
+      color_temp: 447
+    light.tv:
+      state: on
+      brightness: 124
+    light.tripodi:
+      state: on
+      brightness: 124
+    light.etela:
+      state: on
+      brightness: 144
+      color_temp: 447
+    light.sphere:
+      state: on
+    light.spotit:
+      state: off

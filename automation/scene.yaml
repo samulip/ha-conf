@@ -1,0 +1,21 @@
+- alias: Scene LR
+  trigger:
+    platform: state
+    entity_id: input_select.lr_scene
+  action:
+    - service: scene.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.lr_scene", "Aamu") %}
+            scene.energize
+          {%-elif is_state("input_select.lr_scene", "Päivä") %}
+            scene.focus
+          {%-elif is_state("input_select.lr_scene", "Ilta") %}
+            scene.read
+          {%-elif is_state("input_select.lr_scene", "Himmennetty") %}
+            scene.relax
+          {% endif %}
+#      - service: input_select.select_option
+#        data:
+#          entity_id: input_select.lr_scene
+#          option: "-"

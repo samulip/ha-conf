@@ -1,0 +1,27 @@
+port: /dev/ttyACM3
+   # send simultaneous commands as quickly as possible
+   # (may cause commands to fail)
+   # wait_for_ack: false
+ignore_devices:
+  - keeloq_*
+  - eurodomest_*
+  - elrodb_*
+  - friedland_*
+  - warema_*
+  - auriol_*
+  - bl999_*
+  - digitech_*
+  - firstline_*
+  - mebus_*
+  - oregonv1_*
+  - pollin_*
+  - prologue_*
+  - rts_*
+  - ev*
+  - bft_*
+  - livolo_*
+  - mertik_*
+  - metrik_*
+  - fa500*
+  - trc*
+  - upm_esicf2_*

@@ -1,0 +1,59 @@
+- alias: Remote 1
+  trigger:
+    platform: event
+    event_type: button_pressed
+    event_data: {'state': 'on', 'entity_id': 'switch.kaukos_1'}
+  action:
+    - service: input_select.select_next
+      entity_id: input_select.lr_scene
+
+- alias: Remote 2
+  trigger:
+    platform: state
+    entity_id: switch.kaukos_1
+    to: 'off'
+  action:
+    - service: light.turn_off
+      entity_id: group.olohuone
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.lr_scene
+        option: "-"
+
+#  - alias: Remote 3
+#    trigger:
+#      platform: state
+#      entity_id: switch.kaukos_2
+#      to: 'on'
+#    action:
+#      - service: scene.turn_on
+#        entity_id: scene.read
+
+#  - alias: Remote 4
+#    trigger:
+#      platform: state
+#      entity_id: switch.kaukos_2
+#      to: 'off'
+#    action:
+#      - service: scene.turn_on
+#        entity_id: scene.relax
+
+- alias: Remote 5
+  trigger:
+    platform: state
+    entity_id: switch.kaukos_3
+    to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: group.eteinen
+
+- alias: Remote 6
+  trigger:
+    platform: state
+    entity_id: switch.kaukos_3
+    to: 'off'
+  action:
+    - service: light.turn_off
+      entity_id: group.eteinen
+
+

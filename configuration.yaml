@@ -1,0 +1,114 @@
+# vim: sw=2 ts=2 et 
+homeassistant:
+  name: Koti
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
+  unit_system: metric
+  time_zone: Europe/Helsinki
+  customize: !include_dir_merge_named customize
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_api_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+frontend:
+updater:
+discovery:
+sun:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+# Text to speech
+tts:
+  platform: google
+
+
+logger:
+  # Log Severities: notset, debug, info, warn, warning, error, fatal, critical
+  default: info
+  logs:
+    homeassistant.core: warn
+#   homeassistant.components.automation: info
+#   homeassistant.components.climate.nest: error
+#   homeassistant.components.device_tracker: error
+#   homeassistant.components.discovery: warn
+#   homeassistant.components.http: error
+#   homeassistant.components.media_player: warn
+#   homeassistant.components.recorder: warn
+#   homeassistant.components.sensor.darksky: error
+#   homeassistant.components.zwave: info
+#   homeassistant.helpers.script: info
+
+logbook:
+  exclude:
+    entities:
+      - sensor.since_last_boot
+      - sensor.since_last_boot_templated
+      - sensor.time
+      - sensor.date
+#      - automation.xxx
+
+
+# Enables support for tracking state changes over time.
+history:
+  include:
+    domains:
+      - sensor
+      - switch
+      - light
+  exclude:
+    domains:
+      - automation
+      - updater
+    entities:
+      - sun.sun
+      - sensor.last_boot
+      - sensor.date
+
+recorder:
+  purge_days: 3
+  exclude:
+    entities:
+      - sun.sun
+
+rflink: !include rflink.yaml
+light:
+  - platform: hue
+    host: 192.168.1.5
+    filename: phue.conf
+    allow_unreachable: true
+    allow_in_emulated_hue: false
+    allow_hue_groups: false
+sensor: !include_dir_merge_list sensor
+light: !include_dir_merge_list light
+switch: !include_dir_merge_list switch
+
+group: !include group.yaml
+scene: !include scene.yaml
+
+#Automation and scripting
+
+#device_tracker: !include_dir_merge_list device_tracker
+
+input_boolean:
+  trigger_first_morning:
+    name: Sarastusvalot
+    icon: mdi:weather-sunset-up
+
+input_select:
+  lr_scene:
+    name: OH Valaistus
+    icon: mdi:brightness-auto
+    initial: "-"
+    options:
+      - Himmennetty
+      - Ilta
+      - Päivä
+      - Aamu
+      - "-"
+
+automation: !include_dir_merge_list automation
+script: !include_dir_merge_list script

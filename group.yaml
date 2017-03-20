@@ -1,0 +1,29 @@
+Olohuone:
+  - input_select.lr_scene
+  - light.etela
+  - light.pohjoinen
+  - light.tv
+  - light.tripodi
+  - light.rt
+  - light.sphere
+  - light.spotit
+Eteinen:
+  - light.halli
+  - light.eteinen
+MH:
+  - light.s_luku
+  - light.h_luku
+Keittiö: 
+  - light.k_indirect
+Automaatio:
+  - input_boolean.trigger_first_morning
+  - script.morning_light
+  - script.evening_light
+Parveke:
+  - sensor.kosteus
+  - sensor.lampotila
+other:
+  name: Muut
+  view: yes
+  control: hidden
+  entities: light.rflight, sensor.rfsensor 

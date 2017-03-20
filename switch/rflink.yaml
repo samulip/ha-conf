@@ -1,0 +1,9 @@
+platform: rflink
+  devices:
+    newkaku_0163c192_1:
+      name: kaukos_1
+      fire_event: true
+#      newkaku_0163c192_2:
+#        name: kaukos_2
+    newkaku_0163c192_3:
+      name: kaukos_3

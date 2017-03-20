@@ -1,0 +1,27 @@
+platform: rflink
+  # adds new devices to this group if not configured below
+  new_devices_group: rflight
+  devices:
+    newkaku_0156eef6_b:
+      name: rt
+    newkaku_0156fc0e_c:
+      name: sphere
+    newkaku_0156fc0e_b:
+      name: spotit
+      aliasses:
+        - newkaku_0156eef6_c
+    newkaku_01499f4e_b:
+      name: eteinen
+    newkaku_01499f4e_c:
+      name: halli
+    newkaku_015ff2f2_b:
+      name: s_luku
+      aliasses:
+        - newkaku_015f6e3e_b
+    newkaku_015ff2f2_c:
+      name: h_luku
+      aliasses:
+        - newkaku_015f6e3e_c
+    newkaku_0163c192_2:
+      name: k_indirect
+      type: dimmable

@@ -1,0 +1,75 @@
+# vim: sw=2 ts=2 et
+light.rt:
+  friendly_name: Ruokatila
+light.halli:
+  friendly_name: Halli
+light.eteinen:
+  friendly_name: Eteinen
+light.sphere:
+  friendly_name: Sphere
+light.spotit:
+  friendly_name: Spotit
+light.s_luku:
+  friendly_name: Samulin lukuvalo
+light.h_luku:
+  friendly_name: Heidin lukuvalo
+switch.kaukos_1:
+  friendly_name: Kaukosäädin 1
+  assumed_state: true
+  hidden: true
+#switch.kaukos_2:
+#  friendly_name: Kaukosäädin 2
+#  assumed_state: true
+#  hidden: true
+switch.kaukos_3:
+  friendly_name: Kaukosäädin 3
+  assumed_state: true
+  hidden: true
+light.k_indirect:
+  friendly_name: Keittiön epäsuora
+sensor.parveke_lt:
+  friendly_name: Ulkolämpötila
+sensor.parveke_kosteus:
+  friendly_name: Ulkokosteus
+group.rflight:
+  hidden: true
+group.rfsensor:
+  hidden: true
+sensor.upm_esic_0001_bat:
+  hidden: true
+scene.energize:
+  friendly_name: Kirkasvalo
+  icon: mdi:brightness-7
+scene.focus:
+  friendly_name: Päivävalot
+  icon: mdi:brightness-5
+scene.read:
+  friendly_name: Iltavalot
+  icon: mdi:brightness-4
+scene.relax:
+  friendly_name: Himmennetyt
+  icon: mdi:brightness-2
+script.morning_light:
+  hidden: true
+automation.scene_lr:
+  hidden: true
+automation.disable_first_morning_trigger:
+  hidden: true
+automation.enable_first_morning_trigger:
+  hidden: true
+automation.first_morning_motion:
+  hidden: true
+automation.remote_1:
+  hidden: true
+automation.remote_2:
+  hidden: true
+automation.remote_3:
+  hidden: true
+automation.remote_4:
+  hidden: true
+automation.remote_5:
+  hidden: true
+automation.remote_6:
+  hidden: true
+
+

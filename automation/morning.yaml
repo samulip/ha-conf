@@ -1,0 +1,42 @@
+- alias: Enable First Morning Trigger
+  trigger:
+    - platform: time
+      after: '5:00'
+  action:
+    service: homeassistant.turn_on
+    entity_id: input_boolean.trigger_first_morning
+
+- alias: Disable First Morning Trigger
+  trigger:
+    - platform: sun
+      event: sunrise
+      offset: "01:00:00"
+  action:
+    service: homeassistant.turn_off
+    entity_id: input_boolean.trigger_first_morning
+
+- alias: First Morning Motion
+  trigger:
+    platform: state
+    entity_id: light.s_luku
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.trigger_first_morning
+    state: 'on'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.trigger_first_morning
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: light.etela
+          state: 'off'
+        - condition: numeric_state
+          entity_id: light.etela
+          below: 144
+          value_template: '{{ state.attributes.brightness }}'
+    - service: script.turn_on
+      entity_id: script.morning_light
+
+
