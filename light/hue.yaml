@@ -1,0 +1,7 @@
+# vim: sw=2 ts=2 et 
+- platform: hue
+  host: 192.168.1.5
+  filename: phue.conf
+  allow_unreachable: true
+  allow_in_emulated_hue: false
+  allow_hue_groups: false
