@@ -1,6 +1,7 @@
-platform: rflink
+# vim: sw=2 ts=2 et 
+- platform: rflink
   # adds new devices to this group if not configured below
-  new_devices_group: rflight
+#  new_devices_group: rflight
   devices:
     newkaku_0156eef6_b:
       name: rt
