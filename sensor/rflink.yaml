@@ -1,5 +1,5 @@
-platform: rflink
-  new_devices_group: rfsensor
+- platform: rflink
+#  new_devices_group: rfsensor
   devices:
     upm_esic_0001_temp:
       name: parveke_lt

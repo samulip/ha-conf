@@ -1,4 +1,4 @@
-platform: rflink
+- platform: rflink
   devices:
     newkaku_0163c192_1:
       name: kaukos_1
