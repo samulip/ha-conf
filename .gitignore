@@ -1,9 +1,11 @@
+*.swp
 *.pid
 *.xml
 *.csr
 *.crt
 *.key
 *.conf
+.uuid
 home-assistant.log
 home-assistant_v2.db
 lib
