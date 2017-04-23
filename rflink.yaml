@@ -31,3 +31,4 @@ ignore_devices:
   - chuango*
   - doorbell*
   - mc145026*
+  - mc145026*
