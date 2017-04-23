@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+    parveke_lts:
+      value_template: '{% if states("sensor.parveke_lt") | float < -30 -%}{{ None }}{%- else -%}{{ states("sensor.parveke_lt") }}{%- endif %}'
+      entity_id: sensor.parveke_lt 
+- platform: statistics
+  name: parveke_lt5s
+  entity_id: sensor.parveke_lts
+  sampling_size: 5
