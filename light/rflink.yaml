@@ -15,6 +15,8 @@
       name: eteinen
     newkaku_01499f4e_c:
       name: halli
+      aliasses:
+        - newkaku_016e4daa_c
     newkaku_015ff2f2_b:
       name: s_luku
       aliasses:
@@ -26,3 +28,5 @@
     newkaku_0163c192_2:
       name: k_indirect
       type: dimmable
+      aliasses:
+        - newkaku_016e4daa_b

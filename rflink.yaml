@@ -25,3 +25,9 @@ ignore_devices:
   - fa500*
   - trc*
   - upm_esicf2_*
+  - selectplus*
+  - tristate*
+  - bosch*
+  - chuango*
+  - doorbell*
+  - mc145026*

@@ -17,6 +17,7 @@ http:
 frontend:
 updater:
 discovery:
+config:
 sun:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
@@ -79,7 +80,7 @@ light: !include_dir_merge_list light
 sensor: !include_dir_merge_list sensor
 switch: !include_dir_merge_list switch
 
-group: !include group.yaml
+group: !include groups.yaml
 scene: !include scene.yaml
 
 #Automation and scripting
@@ -104,4 +105,4 @@ input_select:
       - "-"
 
 automation: !include_dir_merge_list automation
-script: !include_dir_merge_list script
+script: !include_dir_merge_named script
