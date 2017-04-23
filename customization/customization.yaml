@@ -27,6 +27,14 @@ switch.kaukos_3:
   hidden: true
 light.k_indirect:
   friendly_name: Keittiön epäsuora
+light.tradfri_bulb_gu10_ws_400lm:
+  friendly_name: Keittiön Spotti 1
+light.tradfri_bulb_gu10_ws_400lm_2:
+  friendly_name: Keittiön Spotti 2
+light.tradfri_bulb_gu10_ws_400lm_3:
+  friendly_name: Keittiön Spotti 3
+light.tradfri_bulb_gu10_ws_400lm_4:
+  friendly_name: Keittiön Spotti 4
 sensor.parveke_lt:
   friendly_name: Ulkolämpötila
 sensor.parveke_kosteus:

@@ -15,6 +15,10 @@ MH:
   - light.h_luku
 Keittiö: 
   - light.k_indirect
+  - light.tradfri_bulb_gu10_ws_400lm
+  - light.tradfri_bulb_gu10_ws_400lm_2
+  - light.tradfri_bulb_gu10_ws_400lm_3
+  - light.tradfri_bulb_gu10_ws_400lm_4
 Automaatio:
   - input_boolean.trigger_first_morning
   - script.morning_light
@@ -25,5 +29,4 @@ Parveke:
 other:
   name: Muut
   view: yes
-  control: hidden
   entities: light.rflight, sensor.rfsensor 
