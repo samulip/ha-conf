@@ -1,4 +1,4 @@
-port: /dev/ttyACM3
+port: /dev/serial/by-id/usb-Arduino__www.arduino.cc__0042_55639303634351416080-if00
    # send simultaneous commands as quickly as possible
    # (may cause commands to fail)
    # wait_for_ack: false

@@ -51,6 +51,9 @@ logbook:
       - sensor.time
       - sensor.date
 #      - automation.xxx
+      - sensor.parveke_lts
+      - sensor.parveke_lt5s_mean
+      - sensor.yr_Symbol
 
 
 # Enables support for tracking state changes over time.
